@@ -1,0 +1,317 @@
+/* UNIVERSAL STYLES */
+
+:root {
+    --background-color1-1: rgba(0, 20, 50, 0.9);
+    --background-color1-2: rgba(43, 65, 98, 0.9);
+    --background-color2-1: rgba(36, 36, 36, 0.98);
+    --background-color2-2: rgba(124, 124, 124, 0.98);
+    --text-color1: rgb(255, 240, 212);
+    --text-color2: rgb(205, 225, 255);
+    --alt-text-color1: rgb(255, 255, 255);
+}
+
+@font-face {
+    font-family: "Sawarabi Mincho";
+    src: url('./Fonts/SawarabiMincho-Regular.ttf') format(truetype);
+}
+
+@font-face {
+    font-family: "Roboto Condensed";
+    src: url(./Fonts/RobotoCondensed-VariableFont_wght.ttf) format(truetype);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+}
+
+body {
+    background-image: url(./Images/lkcinamusic_coverphoto.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* HEADER */
+
+.site-header {
+    width: 100%;
+    height: 135px;
+    background: linear-gradient(90deg, var(--background-color1-1) 50%, var(--background-color1-2));
+    color: var(--text-color1);
+    padding: 15px 20px 15px;
+    position: fixed;
+    top: 0px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 4;
+}
+
+.site-header h1 {
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 6rem;
+    letter-spacing: 2px;
+    display: block;
+}
+
+.site-header p {
+    font-family: "Sawarabi Mincho", serif;
+    font-size: 2rem;
+}
+
+.site-header nav {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    padding-bottom: 5px;
+}
+
+.site-header nav a {
+    color: var(--text-color2);
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 2.25rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.site-header nav a:hover {
+    color: var(--alt-text-color1);
+}
+
+.site-header .current {
+    border-bottom: 2px solid var(--text-color2);
+    margin-bottom: -2px;
+}
+
+.site-header .current:hover {
+    border-bottom: 2px solid var(--alt-text-color1);
+}
+
+/* FOOTER */
+
+.site-footer {
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(90deg, var(--background-color1-2), var(--background-color1-1) 50%);
+    padding: 15px 20px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    z-index: 3;
+    margin-top: 40px;
+}
+
+.copyright-modified * {
+    font-family: "Sawarabi Mincho", serif;
+    font-size: 1.25rem;
+    color: var(--text-color2);
+}
+
+.copyright-modified p:last-of-type {
+    margin-top: 10px;
+}
+
+.external-links {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 250px;
+}
+
+.external-links p {
+    color: var(--text-color1);
+    font-size: 2rem;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+.external-links p:after {
+    content: ":";
+}
+
+.external-logo {
+    height: 32px;
+    width: 32px;
+}
+
+a.external-logo {
+    margin: 16px;
+}
+
+a.facebook {
+    border-radius: 50%;
+}
+
+a.linkedin {
+    background-color: white;
+    border-radius: 5px;
+}
+
+/* MAIN */
+
+main {
+    min-height: max(calc(100vh - 275px), 300px);
+    width: 100%;
+    margin-top: 135px;
+}
+
+.page-header { 
+    height: 80px;
+    width: 100%;
+}
+
+.page-header h2 {
+    font-family: "Sawarabi Mincho", serif;
+    font-size: 5rem;
+    color: var(--background-color1-1);
+    position: relative;
+    padding-left: 50px;
+    z-index: 2;
+}
+
+#header-background {
+    height: 65px;
+    width: 450px;
+    background: linear-gradient(90deg, var(--text-color2), var(--alt-text-color1) 15%, var(--text-color2));
+    position: absolute;
+    top: 142px;
+    border-radius: 20% 40% 40% 20%;
+    filter: blur(10px);
+    opacity: 0.8;
+    z-index: 1;
+}
+
+.page-content {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background: linear-gradient(45deg, var(--background-color2-1), var(--background-color2-2));
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.portrait {
+    width: 100%;
+    max-width: 600px;
+    object-fit: cover;
+}
+
+.biography {
+    width: 50%;
+    height: fit-content;
+    font-family: "Sawarabi Mincho";
+    font-size: 1.5rem;
+    color: var(--text-color1);
+}
+
+/* @MEDIA */
+
+    /* HEADER */
+
+@media (max-width: 1125px) {
+    .site-header h1 {
+        font-size: 5rem;
+    }
+
+    .site-header p {
+        font-size: 1.67rem;
+    }
+
+    .site-header nav {
+        padding: 0;
+    }
+
+    .site-header nav a {
+        font-size: 1.875rem;
+    }
+
+    .site-header {
+        height: 115px;
+    }
+    
+    main {
+        min-height: max(calc(100vh - 255px), 300px);
+        margin-top: 115px;
+    }
+
+    #header-background {
+        top: 121px;
+    }
+}
+
+@media (max-width: 915px) {
+    .site-header {
+        height: 150px;
+        flex-wrap: wrap;
+    }
+
+    .site-header nav {
+        height: 40px;
+        width: 100%;
+    }
+
+    main {
+        min-height: max(calc(100vh - 290px), 300px);
+        margin-top: 150px;
+    }
+
+    #header-background {
+        top: 155px;
+    }
+}
+
+    /* FOOTER */
+
+@media (max-width: 825px) {
+    .external-links {
+        width: 150px;
+    }
+
+    .external-links p {
+        width: 75px;
+        margin: 0 20px 0;
+        text-align: center;
+        border-bottom: 2px solid var(--text-color1);
+    }
+
+    .external-links p:after {
+        content: "";
+    }
+}
+
+@media (max-width: 600px) {
+    .external-links p {
+        width: 50px;
+        margin: 0 30px 0;
+        font-size: 1.33rem;
+        border-bottom: 1px solid var(--text-color1);
+    }
+
+    .external-logo {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+    /* MAIN ONLY */
+
+@media (max-width: 1200px) {
+    .page-content {
+        flex-direction: column-reverse;
+    }
+
+    .biography {
+        width: 100%;
+    }
+}
