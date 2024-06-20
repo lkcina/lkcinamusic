@@ -209,7 +209,7 @@ main {
 }
 
 .page-content nav a {
-    font-family: "Roboto Condensed";
+    font-family: "Roboto Condensed", serif;
     font-size: 2rem;
     text-decoration: none;
     color: var(--text-color2);
@@ -239,7 +239,7 @@ main {
 .portfolio h3 {
     width: 40%;
     min-width: 280px;
-    font-family: "Roboto Condensed";
+    font-family: "Roboto Condensed", sans-serif;
     font-size: 3rem;
     text-transform: uppercase;
     text-align: center;
@@ -258,8 +258,8 @@ main {
     grid-auto-rows: 80px;
 }
 
-.piece-group span {
-    font-family: "Sawarabi Mincho";
+.piece-group p, .piece-group span {
+    font-family: "Sawarabi Mincho", serif;
     font-size: 1.5rem;
     color: var(--text-color1);
 }
@@ -275,6 +275,53 @@ span.subtitle {
 
 #back-to-top {
     display: none;
+}
+
+.card-click:hover {
+    cursor: pointer;
+}
+
+#card-container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 99;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: none;
+}
+
+#card {
+    width: 500px;
+    height: auto;
+    position: fixed;
+    top: calc(50vh - 250px);
+    left: calc(50vw - 250px);
+    padding: 10px;
+    background-color: var(--text-color1);
+    border: 3px solid var(--background-color2-2);
+    border-radius: 5px;
+}
+
+#card-title {
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    color: var(--background-color1-1);
+}
+
+#card-subtitle {
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    color: var(--background-color1-1);
+}
+
+
+
+#card-thumbnail {
+    width: 200px;
+    height: auto;
+    float: right;
 }
 
 /* @MEDIA */
@@ -330,6 +377,16 @@ span.subtitle {
 
     #header-background {
         top: 155px;
+    }
+}
+
+@media (max-height: 400px) {
+    .site-header {
+        position: static;
+    }
+
+    main {
+        margin-top: 0;
     }
 }
 

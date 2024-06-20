@@ -221,7 +221,7 @@ main {
 
 .news-featured div h3 {
     width: 40%;
-    font-family: "Roboto Condensed";
+    font-family: "Roboto Condensed", sans-serif;
     font-size: 3rem;
     text-transform: uppercase;
     border-bottom: 3px solid var(--text-color2);
@@ -230,7 +230,7 @@ main {
 
 .news-featured p {
     width: 100%;
-    font-family: "Sawarabi Mincho";
+    font-family: "Sawarabi Mincho", serif;
     font-size: 1.5rem;
     color: var(--text-color1);
     margin-top: 15px;
@@ -238,7 +238,7 @@ main {
 
 .news-featured div a {
     color: var(--text-color1);
-    font-family: "Sawarabi Mincho";
+    font-family: "Sawarabi Mincho", serif;
     font-size: 1.5rem;
 }
 
@@ -254,7 +254,7 @@ main {
 
 #news-date {
     color: var(--background-color1-1);
-    font-family: "Roboto Condensed";
+    font-family: "Roboto Condensed", sans-serif;
     text-align: right;
     font-weight: bold;
 }
@@ -339,6 +339,16 @@ main {
 
     #header-background {
         top: 155px;
+    }
+}
+
+@media (max-height: 400px) {
+    .site-header {
+        position: static;
+    }
+
+    main {
+        margin-top: 0;
     }
 }
 

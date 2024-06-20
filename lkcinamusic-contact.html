@@ -27,23 +27,31 @@
             </div>
             
             <div class="page-content">
-                <form>
-                    <label for="name">Name</label>
-                    <input id="name" type="text" required>
-                    <label for="email">Email</label>
-                    <input id="email" type="email" required>
-                    <label for="subject">Subject</label>
-                    <input id="subject" type="text">
-                    <label for="message">Message</label>
-                    <textarea id="message"></textarea>
-                    <button id="submit" type="submit">Send</button>
+                <form id="contact-form" method="POST">
+                    <div class="inline-block name">
+                        <label for="name">Name</label>
+                        <input id="name" type="text" required>
+                    </div>
+                    <div class="inline-block email">
+                        <label for="email">Email</label>
+                        <input id="email" type="email" required>
+                    </div>
+                    <div class="block subject">
+                        <label for="subject">Subject</label>
+                        <input id="subject" type="text">
+                    </div>
+                    <div class="block message">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="8" required></textarea>
+                    </div>
+                    <button id="send" type="submit">Send</button>
                 </form>
             </div>
         </main>
         <footer class="site-footer">
             <div class="copyright-modified">
                 <p>&copy 2024 Landon K Cina. All rights reserved.</p>
-                <p>Last Modified May 29, 2024</p>
+                <p>Last Modified June 20, 2024</p>
             </div>
             <div class="external-links follow">
                 <p>Follow</p>
